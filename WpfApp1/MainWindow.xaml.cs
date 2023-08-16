@@ -29,17 +29,10 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            /*string adbCommand = "devices";*/
-
             process.StartInfo.FileName = adbPath;
-            process.StartInfo.Arguments = "devices";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.CreateNoWindow = true;
-
-            // Запуск процесса и получение вывода команды
-            process.Start();
-            process.WaitForExit();
 
         }
         private async Task<bool> IsEmptyInRecentItemsListWindow()
